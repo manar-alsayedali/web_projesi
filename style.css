@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header
+{
+    background-color: #f4f6f8;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px ;
+    margin-bottom: 50px;
+}
+
+.logo
+{
+    text-decoration: none;
+    color: #005792;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a
+{
+    color: #005792;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover
+{
+    color: grey;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+h2 {
+    color: #0056b3;
+    padding: 10px 0;
+}
+
+p {
+    line-height: 1.6;
+    color: #333;
+    padding: 10px 0;
+}
+
+.hobby-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hobby-item {
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+}
+
+.hobby-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+}
+  
+
+.main
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+}
+.main1
+{
+    background: url(fotograf/bilgisayar-muhendisligi-68847.jpg) no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+}
+.hakkımda
+{
+    padding-top: 60px;
+}
+
+.main1 h2
+{
+    color: beige;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.main1 h3
+{
+color: cornsilk;
+font-size: 1.2em;
+font-weight: 400;
+}
+
+.main1 h3 span
+{
+    color: cornflowerblue;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.Özgeçmiş {
+    padding: 20px;
+    padding-top: 100px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+section {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #cfe0f0;
+    padding-bottom: 20px;
+}
+
+.Özgeçmiş h2 {
+    color: #0056b3;
+}
+
+article, address {
+    line-height: 1.6;
+    color: #333;
+}
+
+address {
+    font-style: normal;
+}
+
+
+
+.şehrim
+{
+    padding-top: 90px;
+}
+
+
+
+
+
+
+
+
+
+.main.mirasımız {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    padding-top: 90px;
+}
+
+.main.mirasımız div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+.main.mirasımız h2 {
+    color: #005792;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+}
+
+.main.mirasımız p {
+    margin-top: 15px;
+    font-size: 1.1em;
+    text-indent: 50px;
+}
+
+
+
+
+.sonsbrother{
+    color: #A4EBF3;
+    padding: 200px 20%;
+    background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/08/24/107862-server-dark-computer-data_center-748x499.jpg);
+    height: 700px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.sonsbrother .kisa-mesaj{
+    text-transform: capitalize;
+    text-shadow: #CCF2F4 1px 1px;
+}
+.sonsbrother a{
+    display: block;
+    width: 110px;
+}
+.sonsbrother .btn-outline-primary{
+    background-color: #A4EBF3;
+    color: #aaaaaa;
+    margin: 20px 0px;
+    padding: 3px;
+    transition: all 0.2s linear;
+}
+.sonsbrother .btn-outline-primary:hover{
+    background-color: #aaaaaa;
+    color: #A4EBF3;
+    transform: scale(1.2);
+}
+section.form-section {
+    background-color: #F4F9F9;
+    padding: 25px 0px;
+}
+.sosyalmedya .card{
+    margin: 15px;
+    background-color: #dbd7d79a;
+    transition: all 0.2s linear;
+}
+.sosyalmedya .card:hover{
+
+    transform: scale(1.07);
+}
+.sosyalmedya a:hover{
+    text-decoration: none;
+}
+
+section.sosyalmedya{
+    background-color: #dbd7d79a;
+    margin: 25px auto;
+    padding: 10px 0px;
+    background-image: url(https://hdwallpaperim.com/wp-content/uploads/2017/08/24/107862-server-dark-computer-data_center-748x499.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+.login_form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 300px;
+    padding-top: 300px;
+  }
+  
+  .login_form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .login_form input[type="text"], .login_form input[type="password"] {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .login_form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .login_form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #0056b3;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-content a {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  .footer-content img {
+    width: 24px;
+    height: 24px;
+  }
+  

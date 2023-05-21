@@ -1,5 +1,26 @@
-<!DOCTYPE html>
-<html lang="tr-TR">
+<?php
+$kullanici    = $_POST['kullaniciadi'];
+$sifre    = $_POST['sifre'];
+
+$kul="manar.ali@ogr.sakarya.edu.tr";
+$pas="G221210558";
+
+  if ($sifre == $pas && $kullanici==$kul) {
+      
+      $sonuc= " Hoş Geldiniz G221210558";
+      
+      
+
+  }
+
+else {
+    
+    $sonuc= "yanlış kullanıcı adı veya şifre!!! <br> Tekrar dene ";
+}
+
+?>
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +35,7 @@
 </head>
 <body>
 
-    <div>
-        <header>
+<header>
             <a class="navbar-brand logo" href="index.html">Web Sayfası</a>
         <nav class="navbar navbar-expand-lg navbar-light navigation">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,15 +70,14 @@
         </nav>
       </div>
     </header>
-<div>
-
-    <section class="main1">
-        <div>
-            <h2>    Sayfama Hoş Geldiniz<br></h2>
-            <h3>    Ben Manar ALSAYED ALİ.. <br>    Sakarya üniversitesinde <span>bilgisayar mühendisliğini</span> okuyorum.</h3>
-        </div>
-    </section>
-
+    
+    <h1 style="padding-top:150px";>
+    
+    <?php  echo $sonuc  ?>
+        
+        
+    </h1>
+    
     <footer>
         <div class="footer-content">
           <a href="https://www.linkedin.com/in/manar-al-sayed-ali-6b78a5271/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -67,7 +86,6 @@
           <a href="https://www.facebook.com/manar.alsayedali.90" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
       </footer>
-
     
-</body>
+    </body>
 </html>
