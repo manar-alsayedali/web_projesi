@@ -51,20 +51,78 @@
     </header>
 <div>
 
+    <div class="slider">
+        <a id="slide-link" href="">
+            <img id="slide" src="image1.jpg" alt="slide image">
+        </a>
+        <div id="radios">
+            <input type="radio" name="slide" onclick="gotoImage(0)" checked>
+            <input type="radio" name="slide" onclick="gotoImage(1)">
+            <input type="radio" name="slide" onclick="gotoImage(2)">
+            <input type="radio" name="slide" onclick="gotoImage(3)">
+        </div>
+    </div>
+    
+
+     
+        <script>
+        
+        let images = [
+        {url: 'fotograf/28055766_405106103244953saat_6052784369753676600_n.jpg', link: '#idlip'},
+        {url: 'fotograf/ebla.jpg', link: '#ebla'},
+        {url: 'fotograf/8ccce329-8302-4860-haremb30c-4938990d87f5.jpeg', link: '#harem'},
+        {url: 'fotograf/1160784-متحف-إدلب-فى-سوريا.jpg', link: '#muze'}
+    ];
+    let currentImage = 0;
+    let slideInterval;
+    
+    function showImage() {
+        let imgElement = document.getElementById('slide');
+        let linkElement = document.getElementById('slide-link');
+        imgElement.src = images[currentImage].url;
+        linkElement.href = images[currentImage].link;
+        let radioButtons = document.getElementsByName('slide');
+        radioButtons[currentImage].checked = true;
+    }
+    
+    function nextImage() {
+        currentImage++;
+        if (currentImage > images.length - 1) {
+            currentImage = 0;
+        }
+        showImage();
+    }
+    
+    function startSlideShow() {
+        slideInterval = setInterval(nextImage, 3000); // change image every 3 seconds
+    }
+    
+    function gotoImage(i) {
+        currentImage = i;
+        showImage();
+    }
+    
+    window.onload = startSlideShow;
+    
+        </script>
+
     <section class="main şehrim">
         <div>
-          <h2>   İdlip</h2>
+          <h2 id="idlip">   İdlip</h2>
           <p>İdlib veya İdlip, Suriye'nin kuzeybatısında bulunan ve aynı isimli yönetim bölgesinin merkezi olan şehir.
             Türkiye'ye (Hatay iline) de toprak komşuluğu vardır. Oldukça eski bir yerleşim alanı olan şehir yakınlarında pek çok eski şehir kalıntısı vardır. 
             İktisadi olaral tarımdan faydalanır, toprak verimliliğiyle meşhur  içerisinde çok sayıda zeytin ağacı olması nedeniyle <span>Yeşil İdlip</span> olarak anılıyor.. Şehrin nüfusu 2020 yılında 4.186.704 kişi olarak belirlendi 
           </p>
-          <h2>   Ebla</h2>
+
+          <h2 id="ebla">   Ebla</h2>
           <p>idlip'te Tel Mardih bölgesinde yer alan dünya medeniyetinin en eski merkezlerinden biridir ve sadece uygarlık tarihi ile arkeoloji değil, dinler tarihi bakımından da dünyanın en önemli yerlerindendir.
             MÖ 3000 sonlarında ve MÖ 1800-1650 yılları arasında epey önemli bir merkezdi. Arkeolojik kazılarda bu bölgede yaklaşık MÖ 2250 yıllarına ait, Sümer alfabesi ile yazılmış Ebla dilinde 15 bin tablet bulunmuştur.
           </p>
-          <h2>   Harem Kalesi</h2>
+
+          <h2 id="harem">   Harem Kalesi</h2>
           <p>Kale kuzeydoğudan 25 metre uzunluğunda ve 8 metre genişliğinde büyük bir hendek ile çevrilidir.Kalede gözetleme kuleleri, devasa surlar, banyolar ve kalenin üstünü alt kısmına bağlayan gizli mahzenler bulunmaktadır.Bir su kaynağı vardır. Kalenin girişinden girilen küçük bir ambar, sağdan ve soldan iki geçit ve ardından bir çarşı vardır.Ayrıca depolara girişler ve yan taraftaki odalar dahil olmak üzere 12 dükkân vardır. kalenin çatısı, kalenin altında bulunan su kaynağından tahta bir çarkla suyun çıktığı yapay bir kuyu ve onun yanında çömlekçilik banyosu kanallarının dallandığı bir su deposu ve diğer 150 metreye kadar derinlikte kalenin altında yer alan pınara çıkan bodrum.</p>
-          <h2>   İdlip Müzesi</h2>
+          
+          <h2 id="muze">   İdlip Müzesi</h2>
           <p>İdlib Müzesi, MS 1987 yılında kurulmuş olup, İdlib şehrinin doğu girişinde 5000 metrekareden fazla bir alan üzerinde yer almaktadır. Eski Eserler Müdürlüğü'ne kayıtlı 800'ü aşan ören yeri sayısının 800'ü geçtiği valilik genelinde yapılan arkeolojik kazılarda ortaya çıkarılan arkeolojik buluntuların ve değerli eserlerin geniş bir koleksiyonunu salonlarında barındıran, haklı olarak en büyük hazine sayılıyor. valilik
 
             Bölgenin eski eserlerini, özellikle Tell Mardikh'in (tarihi Ebla şehri) en önemli antikalarını içerir. Müze genel olarak valilikte faaliyet gösteren kazı heyetlerinin Ebla, Tell al-Karkh, Tell Mastouma, Tell Afis ve Saraqib gömü alanlarındaki hasadını içermektedir. Antik eserler, MÖ 3. binyıldan başlayarak İslami dönemlere kadar kronolojik sıralarına göre sunuldu ve popüler geleneklere bir kanat ayrıldı.
@@ -75,31 +133,6 @@
         </div>
     </section>
 
-    <div class="slider">
-        <img src="fotograf/28055766_405106103244953saat_6052784369753676600_n.jpg" id="1" style="display: none">
-        <img src="fotograf/ebla.jpg" id="2" style="display: none">
-        <img src="fotograf/8ccce329-8302-4860-haremb30c-4938990d87f5.jpeg" id="3" style="display: none">
-        <img src="fotograf/1160784-متحف-إدلب-فى-سوريا.jpg" id="4" style="display: none">
-    </div>
-    
-    <script>
-        let counter = 1;
-
-setInterval(function() {
-    document.getElementById('1').style.display = 'none';
-    document.getElementById('2').style.display = 'none';
-    document.getElementById('3').style.display = 'none';
-    document.getElementById('4').style.display = 'none';
-    document.getElementById(counter).style.display = 'block';
-    counter++;
-    if(counter > 4) {
-        counter = 1;
-    }
-}, 2000);
-
-    </script>
-
-    
     <footer>
         <div class="footer-content">
           <a href="https://www.linkedin.com/in/manar-al-sayed-ali-6b78a5271/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
