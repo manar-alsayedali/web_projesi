@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr-TR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +13,6 @@
     <title>Manar Alsayed Ali</title>
 </head>
 <body>
-
     <div>
         <header>
             <a class="navbar-brand logo" href="index.html">Web Sayfası</a>
@@ -48,17 +47,37 @@
                 </ul>
             </div>
         </nav>
-      </div>
+      
     </header>
 <div>
 
-    <section class="main1">
-        <div>
-            <h2>    Sayfama Hoş Geldiniz<br></h2>
-            <h3>    Ben Manar ALSAYED ALİ.. <br>    Sakarya üniversitesinde <span>bilgisayar mühendisliğini</span> okuyorum.</h3>
-        </div>
-    </section>
+    <script>
+    
+   
 
+        fetch('https://newsapi.org/v2/everything?q=apple&from=2023-05-20&to=2023-05-20&sortBy=popularity&apiKey=1578a2bf7ad64ee7899a1ac753efe344')
+         .then(response => response.json())
+         .then(data => displayNews(data.articles[0])); // Get only the top article
+     
+     function displayNews(article) {
+         let newsContainer = document.getElementById('top-news');
+         newsContainer.innerHTML = `
+             <h2><a href="${article.url}">${article.title}</a></h2>
+             <p>${article.description}</p>
+             <img src="${article.urlToImage}" alt="${article.title}">
+         `;
+     }
+     
+     
+         </script>
+     
+         
+     <div id="top-news">
+     </div>
+
+    
+
+    
     <footer>
         <div class="footer-content">
           <a href="https://www.linkedin.com/in/manar-al-sayed-ali-6b78a5271/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -67,7 +86,7 @@
           <a href="https://www.facebook.com/manar.alsayedali.90" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
       </footer>
-
-    
+</div>
+</div>
 </body>
 </html>
